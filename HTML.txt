@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced TTS with Download</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background: #f5f5f5; }
+        h1 { color: #333; }
+        textarea { width: 100%; padding: 10px; font-size: 16px; }
+        select, input[type=range] { margin: 10px 0; width: 100%; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 5px; margin-top: 10px; }
+        button:hover { background: #45a049; }
+        .controls { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Advanced TTS with Download</h1>
+    
+    <textarea id="textInput" rows="6" placeholder="Yahan text likhen..."></textarea>
+    
+    <div class="controls">
+        <label for="voiceSelect">Select Voice:</label>
+        <select id="voiceSelect"></select>
+
+        <label for="rate">Speed: <span id="rateValue">1</span></label>
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+
+        <label for="pitch">Pitch: <span id="pitchValue">1</span></label>
+        <input type="range" id="pitch" min="0" max="2" value="1" step="0.1">
+
+        <button id="speakBtn">Speak</button>
+        <button id="downloadBtn">Download as WAV</button>
+    </div>
+
+    <script src="tts.js"></script>
+</body>
+</html>
